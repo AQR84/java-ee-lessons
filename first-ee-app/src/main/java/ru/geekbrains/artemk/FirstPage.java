@@ -21,7 +21,7 @@ public class FirstPage extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.info("Get request firstpage");
+        logger.info("Get request firstpage " );
 
         if (resp.getStatus()==403||resp.getStatus()==404){
             resp.sendRedirect(req.getContextPath() + "/Page404_403");

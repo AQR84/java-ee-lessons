@@ -18,7 +18,7 @@ public class Page404_403 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Get request 404");
 
-        resp.getWriter().println("Error: 404");
+        resp.getWriter().println("Error : 404");
         resp.getWriter().println("<h1>new request GET to 404</h1>");
     }
 

@@ -22,6 +22,7 @@ public class MainPage extends HttpServlet {
         resp.getWriter().println("<h1>new request GET to main page</h1>");
     }
 
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Get request main page");
