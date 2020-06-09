@@ -17,16 +17,13 @@ public class Product extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Get request product");
-
-        resp.getWriter().println("Продукт:");
+        getServletContext().getRequestDispatcher("/pagemenu").include(req, resp);
+        resp.getWriter().println("<br><br>Продукт:<br>");
         resp.getWriter().println("<h1>new request GET to product</h1>");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.info("Get request product");
-
-        resp.getWriter().println("Продукт:");
-        resp.getWriter().println("<h1>new request GET to product</h1>");
+        this.doGet(req,resp);
     }
 }

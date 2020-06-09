@@ -2,7 +2,6 @@ ru/geekbrains/artemk/MainPage.class
 ru/geekbrains/artemk/Order.class
 ru/geekbrains/artemk/HeaderFilter.class
 ru/geekbrains/artemk/Catalog.class
-ru/geekbrains/artemk/FirstPage.class
+ru/geekbrains/artemk/PageMenu.class
 ru/geekbrains/artemk/Card.class
 ru/geekbrains/artemk/Product.class
-ru/geekbrains/artemk/Page404_403.class

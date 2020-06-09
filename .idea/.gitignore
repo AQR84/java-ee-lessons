@@ -11,4 +11,6 @@ log/
 /target
 /out
 /*.iml
+/*.class
+
 

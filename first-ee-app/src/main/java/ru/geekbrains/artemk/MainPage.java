@@ -17,17 +17,14 @@ public class MainPage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Get request main page");
-
-        resp.getWriter().println("Главная страница:");
+        getServletContext().getRequestDispatcher("/pagemenu").include(req, resp);
+        resp.getWriter().println("<br><br>Главная страница:<br>");
         resp.getWriter().println("<h1>new request GET to main page</h1>");
     }
 
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.info("Get request main page");
-
-        resp.getWriter().println("Главная страница:");
-        resp.getWriter().println("<h1>new request GET to main page</h1>");
+        this.doGet(req,resp);
     }
 }

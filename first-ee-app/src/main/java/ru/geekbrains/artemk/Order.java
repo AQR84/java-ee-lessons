@@ -17,17 +17,15 @@ public class Order extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("Get request order");
+        getServletContext().getRequestDispatcher("/pagemenu").include(req, resp);
 
-        resp.getWriter().println("Заказ:");
+        resp.getWriter().println("<br><br>Заказ:<br>");
         resp.getWriter().println("<h1>new request GET to order</h1>");
     }
 
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.info("Get request order");
-
-        resp.getWriter().println("Заказ:");
-        resp.getWriter().println("<h1>new request GET to order</h1>");
+        this.doGet(req,resp);
     }
 }
